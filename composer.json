@@ -1,5 +1,5 @@
 {
-  "name": "flipboxfactory/craft-element-lists",
+  "name": "scottkrieger/craft-element-lists",
   "version": "3.1.0",
   "description": "Simple Element lists",
   "type": "craft-plugin",
@@ -11,12 +11,13 @@
     "yii2"
   ],
   "license": "proprietary",
-  "authors": [
-    {
-      "name": "Flipbox Digital",
-      "homepage": "https://flipboxdigital.com/"
-    }
-  ],
+  "authors": [{
+    "name": "Flipbox Digital",
+    "homepage": "https://flipboxdigital.com/"
+  }, {
+    "name": "Scott Krieger",
+    "homepage": "https://scottkrieger.com/"
+  }],
   "require": {
     "craftcms/cms": ">=3.4.0",
     "flipboxfactory/craft-ember": "^2.4.0",
