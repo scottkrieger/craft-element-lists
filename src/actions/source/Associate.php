@@ -41,12 +41,11 @@ class Associate extends Action
         int $siteId = null,
         int $sortOrder = null
     ) {
-
-        $siteId = $this->resolveSiteId($siteId);
         // Resolve
         $field = $this->resolveField($field);
-        $source = $this->resolveElement($source,$siteId);
-        $target = $this->resolveElement($target,$siteId);
+        $target = $this->resolveElement($target, $siteId);
+        $source = $this->resolveElement($source, $siteId);
+        $siteId = $this->resolveSiteId($siteId ?: $source->siteId);
 
         /** @var Field $field */
 
