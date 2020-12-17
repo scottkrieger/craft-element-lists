@@ -48,9 +48,9 @@ trait ResolverTrait
      * @return ElementInterface|Element
      * @throws HttpException
      */
-    protected function resolveElement(string $element): ElementInterface
+    protected function resolveElement(string $element, $siteId): ElementInterface
     {
-        if (null === ($element = Craft::$app->getElements()->getElementById($element))) {
+        if (null === ($element = Craft::$app->getElements()->getElementById($element,null,$siteId))) {
             throw new HttpException(400, 'Invalid element');
         };
 
