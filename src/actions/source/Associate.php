@@ -42,14 +42,14 @@ class Associate extends Action
         int $sortOrder = null
     ) {
 
+        $siteId = $this->resolveSiteId($siteId);
         // Resolve
         $field = $this->resolveField($field);
-        $source = $this->resolveElement($source);
-        $target = $this->resolveElement($target);
+        $source = $this->resolveElement($source,$siteId);
+        $target = $this->resolveElement($target,$siteId);
 
         /** @var Field $field */
 
-        $siteId = $this->resolveSiteId($siteId ?: $source->siteId);
 
         $query = Association::find()
             ->fieldId($field->id)
